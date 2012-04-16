@@ -1,0 +1,76 @@
+
+/*
+ * This pattern is under construction.
+ *
+ *  <ol class="menu">
+ *      <li>Item 1
+ *          <div class="submenu">
+ *              <ol class="menu">
+ *                  <li>Item 1.1</li>
+ *              </ol>
+ *          </div>
+ *      </li>
+ *  </ol>
+ */
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu > * {
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 1em;
+    user-select: none;
+    -webkit-user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    border: 1px solid transparent;
+}
+
+.menu > .active {
+    
+}
+
+.menu > :hover {
+    color: #ccc;
+    box-shadow:
+        inset 1px 1px #fff,
+        inset -1px -1px #000;
+    border-color: #444;
+}
+
+.menu > :hover:active {
+    padding: 6px 4px 4px 6px;
+    box-shadow:
+        inset 1px 1px #000,
+        inset -1px -1px #fff;
+}
+
+.menu.horizontal > * {
+    display: inline;
+}
+
+.menu > * > .submenu {
+    position: absolute;
+    display: none;
+    top: 1.375em;
+    width: 10em;
+}
+
+.menu > :hover > .submenu {
+    display: block;
+}
+
+.submenu > .menu {
+    padding: 0;
+    display: inline-block;
+}
+
+.submenu > .menu > * {
+    background: none;
+    margin: 0 0.5em 0 0.25em;
+}
+
