@@ -1,0 +1,59 @@
+
+/*
+ * This pattern is similar to the menu pattern, however it is specialized for a heirarchical tree.
+ * Subtrees are default hidden, add the class "open" to a parent `.tree > li` for its child tree to
+ * be shown.
+ *
+ *  <ol class="tree">
+ *      <li>Item 1
+ *          <div class="subtree">
+ *              <ol class="tree">
+ *                  <li>Item 1.1</li>
+ *              </ol>
+ *          </div>
+ *      </li>
+ *  </ol>
+ */
+
+.tree {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tree > li {
+    clear: both;
+    overflow: hidden;
+    padding: 0.25em 0;
+    background-color: #444;
+}
+
+.tree > li:nth-child(2n) {
+    background-color: #5a5a5a;
+}
+
+.tree > li + li {
+    padding-top: 0;
+}
+
+.tree > li + li::before {
+    border-bottom: 1px solid #aaa;
+    content: "";
+    width: 100%;
+    float: left;
+    margin-bottom: 0.25em;
+}
+
+.tree > li > .subtree {
+    display: none;
+    margin: 0.5em 0 -0.25em 0.5em;
+    border-left: 1px solid #aaa;
+    border-top: 1px solid #aaa;
+    border-top-left-radius: 5px;
+    clear: both;
+    overflow: hidden;
+}
+
+.tree > li.open > .subtree {
+    display: block;
+}
