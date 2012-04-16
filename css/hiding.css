@@ -1,0 +1,13 @@
+
+/*
+ * These classes help for hiding or preventing hiding of elements.
+ */
+
+.hidden {
+    display: none;
+}
+
+.non-hideable {
+    display: block !important;
+}
+
