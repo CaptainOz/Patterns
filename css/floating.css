@@ -1,0 +1,25 @@
+
+/*
+ * These classes are useful for dealing with floating.
+ *
+ *  <div>
+ *      <div style="float:left">I float left</div>
+ *      <div class="clear"></div>
+ *  </div>
+ *
+ *  <div class="float-container">
+ *      <div style="float:left">I float left</div>
+ *  </div>
+ */
+
+.clear {
+    clear: both;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.float-container {
+    overflow: hidden;
+}
+
