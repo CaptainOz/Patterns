@@ -1,0 +1,39 @@
+
+/*
+ *  <div class="button">
+ *      click me
+ *  </div>
+ */
+
+.button {
+    border: 1px solid transparent;
+    display: inline-block;
+    border-radius: 1em;
+    padding: 4px 6px;
+    height: 1.25em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
+.button:hover {
+    border-color: #aaa;
+    background-color: #888;
+}
+
+.button:hover:active {
+    padding: 5px 5px 3px 7px;
+    box-shadow:
+        inset 3px 3px 6px #555,
+        inset -2px -2px 3px #666;
+}
+
+.button * {
+    user-select: none;
+    -webkit-user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
