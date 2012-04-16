@@ -1,0 +1,51 @@
+
+/*
+ *  This pattern assumes that the `button` pattern is also included.
+ *
+ *  <div class="combo-button">
+ *      <input />
+ *      <div class="button">
+ *          click me
+ *      </div>
+ *  </div>
+ */
+
+.combo-button {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    display: inline-block;
+    height: 1.5em;
+    clear: both;
+    overflow: hidden;
+}
+
+.combo-button > input,
+.combo-button > .button {
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.combo-button > input {
+    border-right: 1px solid #aaa;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-right: 0.25em;
+}
+
+.combo-button > .button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 1px 4px 1px 4px;
+}
+
+.combo-button > .button:hover:active {
+    padding: 2px 3px 0 5px;
+}
+
+.combo-button > .button > img {
+    max-height: 1.25em;
+}
