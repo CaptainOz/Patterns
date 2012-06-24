@@ -29,7 +29,7 @@ endif()
 # Set up configurable variables.
 if( ${LW_BUILD_WIN32} )
     set( LW_DEFAULT_BOOST_INCLUDE_DIR C:\Boost\include\v1_49_0 )
-    set( LW_DEFAULT_BOOST_LIBRARY_DIR C:\Boost\lib
+    set( LW_DEFAULT_BOOST_LIBRARY_DIR C:\Boost\lib )
 else()
     set( LW_DEFAULT_BOOST_INCLUDE_DIR /usr/local/include )
     set( LW_DEFAULT_BOOST_LIBRARY_DIR /usr/local/lib )
