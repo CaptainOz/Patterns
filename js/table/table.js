@@ -314,7 +314,7 @@ var Table = (function(){
     Table.rowIDColumn = '_table_rowID';
 
     var TABLE_TEMPLATE = $(
-        '<table class="pl-table"><thead><tr></tr></thead><tbody></tbody></table>'
+        '<table class="lw-table"><thead><tr></tr></thead><tbody></tbody></table>'
     );
     var DEFAULT_TABLE_CONFIG = {
         'selectable'    : false,
@@ -371,7 +371,7 @@ var Table = (function(){
         // Build the table object.
         var header          = TABLE_TEMPLATE.clone();
         var body            = TABLE_TEMPLATE.clone();
-        var bodyContainer   = $( '<div class="pl-table-body-container"></div>' );
+        var bodyContainer   = $( '<div class="lw-table-body-container"></div>' );
         this._bodyTable     = body;
         this._headerTable   = header;
         header.addClass( 'header' );
